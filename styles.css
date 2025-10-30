@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+     font-family: "Roboto Condensed", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    background-color: transparent; 
+   
+}
+header.scrolled {
+  background-color: white;  /* 👈 cambia al hacer scroll */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* pequeña sombra */
+}
+
+
+header .logo-container .logo{
+   width: auto;
+   height: 60px; 
+   
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    font-size: 20px;
+}
+header a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+}
+section {
+  padding: 4rem; /* espacio interno uniforme para todas las secciones */
+}
+
+.hero{
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.85)), url(/media/hero-background.jpg);
+   background-size: cover;
+    
+}
+
+ 
+.hero-container{
+   
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    
+}
+.hero-container .p-container{
+    max-width: 800px;
+    width: 100%;
+   
+}
+.hero h1{
+    color: #fe914d;
+    font-size: 64px;
+}
+.hero .hero-text{
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.hero .contact-btn{
+    padding: 15px;
+    border: none;
+    background-color: #fe914d;
+    border-radius: 10px;
+}
+.hero .contact-btn{
+    cursor: pointer;
+}
+.hero .contact-btn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+.triangle{
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+  z-index: 2;
+}
+
+/*estilos del carrusel*/
+.carousel{ /*toda la seccion*/
+    position: relative;
+    width: 100%;
+    max-width: 900px ;
+    margin: 5rem auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.carousel-container{
+    display: flex;
+    transition:  transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%; /* Cada slide ocupa todo el ancho del carrusel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img{
+    width: 200px;
+    height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .hero .hero-text {
+    font-size: 1.1rem;
+  }
+  .hero-container {
+    padding: 3rem 1rem;
+  }
+}
+
+h2{
+    font-size: 30px;
+    color: #fe914d;
+}
+.about-us{
+    margin-top: 6rem;
+    padding: 0 8rem;
+    
+   
+}
+.about-us span{
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem ;
+}
+.about-us h2{
+    margin-bottom: 1.5rem;
+}
+.about-description{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    font-size: 24px;
+    max-width: 1200px;
+     
+   
+}@media (max-width: 768px) {
+  .about-description {
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 18px;
+  }
+}
