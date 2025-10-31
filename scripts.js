@@ -13,7 +13,7 @@
   let index = 0;
 
   function showSlide(i) {
-    const offset = -i * 100; // desplazamiento
+    const offset = -i * 100; // desplazamiento ajustado para slides de 80% + 2% margin
     document.querySelector('.carousel-container').style.transform = `translateX(${offset}%)`;
   }
 
@@ -30,4 +30,4 @@
   // Opcional: animación automática
   setInterval(() => {
     nextBtn.click();
-  }, 3000); // cambia cada 3 segundos
+  }, 5000); // cambia cada 3 segundos

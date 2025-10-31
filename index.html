@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRESAMI | Refacciones Industriales y Marinas</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    
+     <link rel="stylesheet" href="styles.css">
+    
+ 
     
 </head>
 <body>
@@ -17,7 +19,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">Inicio</a>
+                    <a href="#hero">Inicio</a>
                 </li>
                 <li>
                     <a href="#about-us">Nosotros</a>
@@ -32,7 +34,7 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-container">
             <h1>Tus expertos en refacciones industriales y marinas</h1>
             <div class="p-container">
@@ -43,26 +45,48 @@
             </button>
           
             
+            
         </div>
        
       <div class="triangle"></div>
     </section>
 
-    <section class="carousel">
-        <div class="carousel-container">
-            <div class="slide active">
-                <img src="./media/brands-1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="./media/brands-2.png" alt="">
-            </div>
+<section class="about-us" id="about-us">
+       
+        <span>Conócenos</span>
+        <h2>Consigue las piezas que buscas con nosotros</h2>
+        <div class="about-description">
+            <p>
+                En CRESAMI contamos con más de 6 años de experiencia en la distribución de refacciones y de transmisión de potencia para diversas industrias. Nuestro personal capacitado le ayudará a llegar a una solución para su aplicación.
+            </p>
+            <p>
+                Sabemos que sus equipos no pueden detenerse, por lo que le ofrecemos servicio de urgencia y envíos a todo el territorio nacional, con un precio competitivo y manejando las mejores marcas del mercado.
+                En CRESAMI, si no lo tenemos, <span class="lo-conseguimos">¡Lo conseguimos!</span>
+            </p>
+           
+            
         </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+        
     </section>
-    
 
+<section class="carousel">
+  <div class="carousel-wrapper">
+    <div class="carousel-container">
+      <div class="slide">
+        <img src="./media/brands-1.png" alt="SKF">
+      </div>
+      <div class="slide">
+        <img src="./media/brands-2.png" alt="Festo">
+      </div>
+    </div>
+  </div>
+  
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</section>
     
+<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
