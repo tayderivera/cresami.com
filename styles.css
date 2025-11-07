@@ -54,10 +54,13 @@ header a{
 section {
   padding: 4rem; /* espacio interno uniforme para todas las secciones */
 }
+p{
+  font-size: 24px;
+}
 
 .hero{
     position: relative;
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.85)), url(/media/hero-background.jpg);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.85)), url(/media/bg/hero-background.jpg);
    background-size: cover;
     
 }
@@ -93,10 +96,9 @@ section {
     border: none;
     background-color: #fe914d;
     border-radius: 10px;
-}
-.hero .contact-btn{
     cursor: pointer;
 }
+
 .hero .contact-btn a{
     text-decoration: none;
     color: #fff;
@@ -215,6 +217,59 @@ h2{
 
 }
 
+.productos .productos-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  padding: 0px 120px;
+}
+.productos .productos-text .catalogo-btn{
+    padding: 15px;
+    border: none;
+    background-color: #fe914d;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.productos .productos-text .catalogo-btn a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.productos .grid-container{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   grid-auto-rows: 250px;
+   gap: 20px;
+   width: 90%;
+   max-width: 1100px;
+   margin: 0 auto;
+
+}
+
+.productos .grid-container .grid-item{
+  padding: 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.productos .grid-container .grid-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
 
 @media (max-width: 768px) {
   .about-description {
@@ -223,3 +278,5 @@ h2{
     font-size: 18px;
   }
 }
+
+
