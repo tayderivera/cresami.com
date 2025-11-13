@@ -16,7 +16,7 @@
             <img class="logo" src="./media/marcas/cresami-transparente.png" alt="CRESAMI Logo">
         </div>
         
-        <nav>
+        <nav class="nav-menu">
             <ul>
                 <li>
                     <a href="#hero">Inicio</a>
@@ -28,46 +28,54 @@
                     <a href="#productos">Productos</a>
                 </li>
                 <li>
-                    <a href="">Contacto</a>
+                    <a href="#contacto">Contacto</a>
                 </li>
             </ul>
         </nav>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section class="hero" id="hero">
         <div class="hero-container">
-            <h1>Tus expertos en refacciones industriales y marinas</h1>
-            <div class="p-container">
+            <h1>Tus expertos en refacciones <br> para diversas industrias</h1>
+              <div class="p-container">
                   <p class="hero-text">Brindamos soluciones para diversas industrias. Garantizamos calidad trabajando con marcas líderes en el mercado y ofreciendo precios competitivos.</p>
             </div>
             <button class="contact-btn">
-                <a href="">Contáctanos</a>
+                <a href="#contacto">Contáctanos</a>
             </button>
           
-            
-            
         </div>
        
       <div class="triangle"></div>
     </section>
 
 <section class="about-us" id="about-us">
-       
-        <span>Conócenos</span>
-        <h2>Consigue las piezas que buscas con nosotros</h2>
-        <div class="about-description">
-            <p>
+    <div class="about-container">
+        <div class="img-container">
+               <img src="./media/bg/about-us.jpg" alt="">
+               <div class="years-exp">
+                    <span>6+</span>
+                    <p>años de experiencia</p>
+                </div>
+        </div>
+     
+        <div class="text-container">
+             <p>Conócenos</p>
+        <h2>Consigue las piezas que buscas con nosotros </h2>
+        <p class="description">
                 En CRESAMI contamos con más de 6 años de experiencia en la distribución de refacciones y de transmisión de potencia para diversas industrias. Nuestro personal capacitado le ayudará a llegar a una solución para su aplicación.
             </p>
-            <p>
-                Sabemos que sus equipos no pueden detenerse, por lo que le ofrecemos servicio de urgencia y envíos a todo el territorio nacional, con un precio competitivo y manejando las mejores marcas del mercado.
-               Tenga la confianza de que, si no lo tenemos, <span class="lo-conseguimos">¡Lo conseguimos!</span>
-            </p>
-           
-            
+           <p>Si no lo tenemos <span class="lo-conseguimos">¡Lo conseguimos!</span></p>
         </div>
-        
-    </section>
+       
+    </div>
+</section>
 
 <section class="carousel">
   <div class="carousel-wrapper">
@@ -84,15 +92,12 @@
   <button class="prev">&#10094;</button>
   <button class="next">&#10095;</button>
 </section>
-    
-<script type="text/javascript" src="scripts.js"></script>
-</body>
-</html>
 
 <section class="productos" id="productos">
     <div class="productos-text">
+        <p>Nuestros productos</p>
         <h2>Catálogo de Productos</h2>
-        <p>Manejamos una gran variedad de productos para diversas industrias como la industrial, transmisión de potencia, automotriz, agrícola, marina, entre otras. </p>
+        <p>Manejamos una gran variedad de productos para diversas industrias como la industrial, transmisión de potencia, automotriz, agrícola, marina, entre otras.</p>
         <button class="catalogo-btn">
             <a href="">Ver catálogo</a>
         </button>
@@ -105,13 +110,11 @@
               <img src="./media/productos/conico.png" alt="">
         </div>
         <div class="grid-item">
-              <img src="./media/productos/rodamiento_rodillos.png" alt="">
-        </div>
-        <div class="grid-item">
             <img src="./media/productos/chumacera.png" alt="">
         </div>
+      
         <div class="grid-item">
-            <img src="./media/productos/retenes.png" alt="">
+            <img src="./media/productos/o-ring.png" alt="">
         </div>
         <div class="grid-item">
             <img src="./media/productos/sello-mec.png" alt="">
@@ -124,25 +127,202 @@
         </div>
      
         <div class="grid-item">
-            <img src="./media/productos/coples hrc.png" alt="">
+            <img src="./media/productos/coples-sit.png" alt="">
+        </div>
+        <div class="grid-item">
+            <img src="./media/productos/cadenas-candado.png" alt="">
         </div>
           <div class="grid-item">
             <img src="./media/productos/rodajas.png" alt="">
         </div>
         <div class="grid-item">
-            <img src="./media/productos/grasas.avif" alt="">
+            <img src="./media/productos/grasas-skf.png" alt="">
         </div>
         <div class="grid-item">
-            <img src="./media/productos/loctite-varios.jpg.jpg" alt="">
+            <img src="./media/productos/loctite-varios.png" alt="">
         </div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        <div class="grid-item"></div>
-        
     </div>
 
 </section>
 
+<section class="contacto" id="contacto">
+    <div class="contacto-container">
+        <div class="contacto-info">
+            <div class="info-text">
+                <p>Contáctanos</p>
+                <h2>Ponte en contacto con nosotros</h2>
+                <p>Su información es confidencial.</p>
+            </div>
+            
+       
+            <div class="ubicacion-tabs">
+                <button class="tab-btn active" data-tab="centro">Centro</button>
+                <button class="tab-btn" data-tab="norte">Norte</button>
+            </div>
+            
+          
+            <div class="info-details tab-content active" id="centro">
+                <div class="info-item">
+                    <h3>DIRECCIÓN</h3>
+                    <p>Álvaro Obregón 604, Zona Centro, 89000 Tampico, Tamps</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>CORREO</h3>
+                    <a href="mailto:info@cresami.com">info@cresami.com</a>
+                </div>
+                
+                <div class="info-item">
+                    <h3>TELÉFONO</h3>
+                    <a href="tel:833-212-2821">833-212-2821</a>
+                </div>
+            </div>
+            <div class="info-details tab-content" id="norte">
+                <div class="info-item">
+                    <h3>DIRECCIÓN</h3>
+                    <p>Carr. Tampico Mante 1302-A, Las Americas, 89329 Tampico, Tamps</p>
+                </div>
+                
+                <div class="info-item">
+                    <h3>CORREO</h3>
+                    <a href="mailto:info@cresami.com">info@cresami.com</a>
+                </div>
+                
+                <div class="info-item">
+                    <h3>TELÉFONO</h3>
+                    <a href="tel:833-214-3415">833-214-3415</a> | 
+                    <a href="tel:833-214-8322">833-214-8322</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contacto-form">
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                </div>
+                
+                <button type="submit" class="enviar-btn">Enviar</button>
+                
+                <p class="form-note">Su correo será enviado a <a href="mailto:info@cresami.com">info@cresami.com</a></p>
+            </form>
+        </div>
+    </div>
+    
+    <div class="mapa-container">
+      
+        <iframe 
+            id="mapa-centro"
+            class="mapa-iframe active"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.8567189!2d-97.8497563!3d22.215823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7f30f0f0f0f0f%3A0x1234567890abcdef!2s%C3%81lvaro%20Obreg%C3%B3n%20604%2C%20Zona%20Centro%2C%2089000%20Tampico%2C%20Tamps%2C%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1699999999999!5m2!1ses!2smx" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+     
+        <iframe 
+            id="mapa-norte"
+            class="mapa-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.234567!2d-97.8234567!3d22.3456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d7f987654321%3A0xabcdef1234567890!2sCarr.%20Tampico%20Mante%201302-A%2C%20Las%20Americas%2C%2089329%20Tampico%2C%20Tamps%2C%20M%C3%A9xico!5e0!3m2!1ses!2smx!4v1699999999998!5m2!1ses!2smx" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
 
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="./media/marcas/cresami-transparente.png" alt="CRESAMI Logo" class="footer-logo">
+                <p class="footer-description">
+                    Expertos en refacciones para diversas industrias con más de 6 años de experiencia.
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Información de Contacto</h3>
+                <div class="contact-info">
+                    <div class="location">
+                        <h4>Centro</h4>
+                        <p>Álvaro Obregón 604<br>Zona Centro<br>89000 Tampico, Tamps</p>
+                        <p><a href="tel:833-212-2821">833-212-2821</a></p>
+                    </div>
+                    
+                    <div class="location">
+                        <h4>Norte</h4>
+                        <p>Carr. Tampico Mante 1302-A<br>Las Americas<br>89329 Tampico, Tamps</p>
+                        <p>
+                            <a href="tel:833-214-3415">833-214-3415</a> | 
+                            <a href="tel:833-214-8322">833-214-8322</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="email-contact">
+                    <p><strong>Correo:</strong> <a href="mailto:info@cresami.com">info@cresami.com</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Nuestros Enlaces</h3>
+                <ul class="external-links">
+                    <li>
+                        <a href="https://rodamientosenlinea.com" target="_blank" rel="noopener noreferrer">
+                            Rodamientos en Línea
+                            <span class="external-icon">↗</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://coplesmecanicos.com" target="_blank" rel="noopener noreferrer">
+                            Coples Mecánicos
+                            <span class="external-icon">↗</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Navegación</h3>
+                <ul class="footer-nav">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about-us">Nosotros</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-divider"></div>
+            <p>&copy; 2024 CRESAMI -TR Web Dev. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
 
+<script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
