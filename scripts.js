@@ -106,3 +106,15 @@
       navMenu.classList.remove('active');
     }
   });
+    //función para el envio de correos
+  emailjs.sendForm(
+    'service_8lfihxk',
+    'template_sbb0m7j',
+    '#contactForm',
+    '3udCcSju34YsiYZfb'
+  ).then(() =>{
+    alert('Mensaje enviado correctamente');
+  }).catch((error)=> {
+    alert("Error al mandar el mensaje")
+  }
+  )
