@@ -249,7 +249,7 @@
         </div>
         
         <div class="contacto-form">
-            <form>
+            <form id="contactForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
@@ -271,9 +271,9 @@
                     <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
                 </div>
                 
-                <button type="submit" class="enviar-btn">Enviar</button>
-                <!-- CAPTCHA -->
-                <div class="g-recaptcha" style="margin: auto;" data-sitekey="6LfpygwsAAAAAO0JDIvACBZtKGGFTWBWVZfZrz6e"></div>
+                <div class="g-recaptcha" style="margin: 20px auto; display: flex; justify-content: center;" data-sitekey="6LfpygwsAAAAAO0JDIvACBZtKGGFTWBWVZfZrz6e"></div>
+                
+                <button type="submit" class="enviar-btn" id="btnSend">Enviar</button>
                 <p class="form-note">Su correo será enviado a <a href="mailto:info@cresami.com">info@cresami.com</a></p>
             </form>
         </div>
@@ -376,7 +376,16 @@
     </div>
 </footer>
 
-<script type="text/javascript" src="scripts.js"></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script type="text/javascript" src="scripts.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script>
+  (function () {
+    emailjs.init("3udCcSju34YsiYZfb");
+  })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
