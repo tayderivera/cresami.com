@@ -106,15 +106,54 @@
       navMenu.classList.remove('active');
     }
   });
-    //función para el envio de correos
-  emailjs.sendForm(
-    'service_8lfihxk',
-    'template_sbb0m7j',
-    '#contactForm',
-    '3udCcSju34YsiYZfb'
-  ).then(() =>{
-    alert('Mensaje enviado correctamente');
-  }).catch((error)=> {
-    alert("Error al mandar el mensaje")
-  }
-  )
+ 
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("btnSend");
+
+  form.addEventListener("submit", function (event){
+    event.preventDefault();
+  
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Verificación requerida',
+        text: 'Por favor, completa el captcha para continuar.',
+        confirmButtonColor: '#007bff'
+      });
+      return;
+    }
+    
+    btn.disabled = true;
+    btn.innerText = "Enviando...";
+
+    emailjs.sendForm(
+      'service_8lfihxk',
+      'template_sbb0m7j',
+      '#contactForm',
+      '3udCcSju34YsiYZfb'
+    ).then(() => {
+      Swal.fire({
+        icon: 'success',
+        title: '¡Mensaje enviado!',
+        text: 'Tu mensaje ha sido enviado correctamente. Nos pondremos en contacto contigo pronto.',
+        confirmButtonColor: '#007bff'
+      });
+      form.reset();
+      grecaptcha.reset(); 
+      btn.disabled = false;
+      btn.innerText = "Enviar";
+    }).catch((error) => {
+      console.error('Error al enviar:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Hubo un problema al enviar el mensaje. Por favor, intenta de nuevo.',
+        confirmButtonColor: '#dc3545'
+      });
+      grecaptcha.reset(); 
+      btn.disabled = false;
+      btn.innerText = "Enviar";
+    });
+  });
+
